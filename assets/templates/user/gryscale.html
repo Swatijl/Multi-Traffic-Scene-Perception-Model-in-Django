@@ -1,0 +1,56 @@
+{% extends 'user/design.html' %}
+{% block userblock %}
+{% load staticfiles %}
+<style>
+.formin{
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding:5px;
+    background-color:red;
+}
+.formin table{
+margin-left:20px;
+}
+table{
+height:100%;
+}
+input[type=submit]{
+border:1px solid white;
+background:none;
+text-transform:uppercase;
+color:white;
+}
+input[type=submit]:hover{
+background:white;
+color:red;
+}
+table{
+margin-left:100px;
+margin-top:50px;
+}
+</style>
+<table>
+
+   <div id="a1" style="margin-left:410px;color:white;font-family:georgia;font-size:50px;">ORIGINAL IMAGE</div>
+    <div id="" ><img src="{{obj.images.url}}" style="width:300px;height:250px;margin-left:470px;margin-top:30px;"></div>
+    <div id="aa1"><img src="{% static 'process1.gif' %}" style="width:300px;height:250px;margin-left:500px;float:right;margin-top:-250px;"></div>
+    <div id="a2" style="margin-left:460px;color:white;font-family:georgia;font-size:50px;"> PRE-PROCESSING....</div>
+    <tr><td style="padding-left:100px;"><img src="{% static 'image/lab.png' %}" style="width:300px;height:250px;"></td>
+        <td><img src="{% static 'image/b.png' %}" style="width:300px;height:250px;"></td>
+        <td><img src="{% static 'image/l.png' %}" style="width:300px;height:250px;"></td></tr><br>
+</table>
+     <div id="a3" style="margin-left:460px;color:white;font-family:georgia;font-size:50px;margin-top:20px;">VISUAL IMAGE</div>
+    <img src="{% static 'image/final.png' %}" style="width:300px;height:250px;margin-left:500px;"></td></tr>
+
+
+</tr>
+<td colspan="3" style="text-align: center;vertical-align: middle;"><a style="color:white;border:1px solid white;padding:10px;" href="{% url 'viewlist' pk %}">Click to Find Traffic</a></td>
+
+</table>
+{% endblock %}

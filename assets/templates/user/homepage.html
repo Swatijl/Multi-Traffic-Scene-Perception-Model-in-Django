@@ -1,0 +1,59 @@
+{% extends 'user/design.html' %}
+{% block userblock %}
+{% load staticfiles %}
+<style>
+.formin{
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 30em;
+    margin: auto;
+    padding:5px;
+
+}
+.formin table{
+margin-left:20px;
+}
+table{
+height:100%;
+}
+input[type=submit]{
+border:1px solid white;
+background:none;
+text-transform:uppercase;
+color:white;
+}
+
+</style>
+</head>
+<body>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table style="float:left;background-color:white;border:2px solid black;border-radius:10px;width:400px;height:400px;padding-left:100px;margin-left:200px;">
+    <tr>
+        <td><input type="file" name="testcur" accept="image/*" onchange="loadFile(event)"></td>
+    </tr>
+    <tr>
+        <td style="height:50%"><img id="output" width="200px" height="200px"/></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="" ><input type="submit" name="submit" value="submit" style="width:100px;height:30px;background-color:black;color:white;margin-left:40px;"></td>
+    </tr>
+</table>
+</form>
+<div class="formin"><img src="{% static 'weather2.png' %}" style="width:500px;height:500px;margin-left:650px;margin-top:-140px;"></div>
+
+
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'user/design.html' %}
+{% block userblock %}
+{% load staticfiles %}
+
+<style>
+    .traffic{
+     position: absolute;
+    top:50px;
+    left:px;
+    padding:5px;
+    height:400px;
+    width:1150px;
+    o;
+    float:left;
+    overflow:scroll;
+    }
+    .traffic table{
+    width:90em;
+    text-align:center;
+
+    border-spacing:1px;
+    background:;
+}
+
+
+.traffic table tr th{
+background:;
+padding:5px;
+}
+.traffic table tr td{
+background:;
+padding:5px;
+}
+.traffic table tr:hover td{
+background:rgba();
+}
+
+</style>
+ <div id="aa" style="font-family:georgia;font-size:30px;font-weight:bold;color:white;margin-left:450px;">UPLOADED IMAGE</div><br>
+<div class="traffic">
+
+<table style="background-color:white" border="2">
+<tr>
+<th style="color:black">UPLOADER NAME</th>
+<th style="color:black">WEATHER CONDITION</th>
+<th style="color:black">AREA</th>
+<th style="color:black">DISTRIC</th>
+<th style="color:black">STATE</th>
+<th style="color:black">TRAFFIC IMAGES</th>
+</tr>
+{% for d in form %}
+<tr>
+<td style="color:red">{{d.usid.userid}}</td>
+<td style="color:red">{{d.wheather}}</td>
+<td style="color:red">{{d.area}}</td>
+<td style="color:red">{{d.distric}}</td>
+<td style="color:red">{{d.state}}</td>
+<td><img src="{{d.images.url}}" style="width:100px;"></td>
+{% endfor %}
+</tr>
+</table>
+</div>
+
+
+
+
+{% endblock %}

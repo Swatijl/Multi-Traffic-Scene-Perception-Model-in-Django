@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Solution Responsive Web Template</title>
+<!--
+
+Template 2081 Solution
+
+http://www.tooplate.com/view/2081-solution
+
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- animate -->
+		<link rel="stylesheet" href="static/css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="static/css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel="stylesheet" href="static/css/style.css">
+		<style>
+			form {
+  position: relative;
+  width: 350px;
+  margin-bottom:80px ;
+  margin-left:500px;
+  background: ;
+  padding: 20px 22px;
+  border: px solid;
+
+}
+
+form input, form button {
+  width: 212px;
+  border: 1px solid;
+  margin-left:50px;
+  border-bottom-color: rgba(255,255,255,.5);
+  border-right-color: rgba(60,60,60,.35);
+  border-top-color: rgba(60,60,60,.35);
+  border-left-color: rgba(80,80,80,.45);
+  background-color: rgba(0,0,0,.2);
+  background-repeat: no-repeat;
+  padding: 8px 24px 8px 10px;
+  font: bold .875em/1.25em "Open Sans Condensed", sans-serif;
+  letter-spacing: .075em;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  text-color:;
+  margin-bottom: 19px;
+}
+
+form input:focus { background-color: rgba(0,0,0,.4); }
+
+form input.email {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAYAAAC9QufkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6M0YwNDIzMTQ3QzIzMTFFMjg3Q0VFQzhDNTgxMTRCRTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6M0YwNDIzMTU3QzIzMTFFMjg3Q0VFQzhDNTgxMTRCRTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozRjA0MjMxMjdDMjMxMUUyODdDRUVDOEM1ODExNEJFNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozRjA0MjMxMzdDMjMxMUUyODdDRUVDOEM1ODExNEJFNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsOChsgAAADUSURBVHjaYvz///9JBgYGMwbSwSkGoOafQPwKiAOBmIEIHAXED0H6QJwPQGwAxE+AOJOAxnwgvgfEKiB9MM0gWg6IbwNxIw6NXUB8HogloHwUzSAsBAoDIJ4DxMxQMRA9H4gPADE/kloMzSCsBcR/gHgj1LAt0HBRR1P3gQktBA2AeBcQZwHxCyB+AsT3gTgFKq6FohrJZnssoW6AxPaDBqoZurP9oBrtCYS2ExA/h9JgzX+gAsZExrMZVP0fmGZ1IjWiBCoL0NsXgPgGGcnzLECAAQD5y8iZ2Z69IwAAAABJRU5ErkJggg==);
+  background-position: 220px 10px;
+}
+
+form input.pass {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAQCAYAAADNo/U5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTVFMDg1QzU3QzIzMTFFMjgwQThGODZFM0EwQUZFQ0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTVFMDg1QzY3QzIzMTFFMjgwQThGODZFM0EwQUZFQ0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NUUwODVDMzdDMjMxMUUyODBBOEY4NkUzQTBBRkVDRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1NUUwODVDNDdDMjMxMUUyODBBOEY4NkUzQTBBRkVDRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv2NSIIAAADYSURBVHjanJAxCsJAEEXXaBMQtvIMqTxDKjtPELC1svMoOYM2WlqIhVcQFMVgG7ATAoIggfGPjrLIrBo/vCzZ+Z+dGUNExiECI7Clhw5gAtqur8YfUQxm4AzGIAMRSIAFXbC8OyUdghwsgH173cp9Lr5XqAeOSsANcj3h/8BpbQ4Ko6uQOvtMQy6noG4+iz3XZ4iHbIEQ9L8EeUlN3t5etvSrMg6RqajAc78BQ7BTq6QrllV3tKLvpZOclyrt/TWTlTP0zVQqba/BAKyUWsmh1BPUxL70JsAABHkyyK1uocIAAAAASUVORK5CYII=);
+  background-position: 223px 8px
+}
+
+::-webkit-input-placeholder { color:yellow; text-transform: uppercase; }
+::-moz-placeholder { color: #ccc; text-transform: uppercase; }
+:-ms-input-placeholder { color: yellow; text-transform: uppercase; }
+
+form button[type=submit] {
+  width: 148px;
+  margin-bottom: 50;
+  margin-left:80px;
+  color:yellow   ;
+  letter-spacing: .05em;
+  text-shadow: 0 1px 0 #133d3e;
+  text-transform: uppercase;
+  background:	black ;
+  border-top-color: #9fb5b5;
+  border-left-color: #608586;
+  border-bottom-color: #1b4849;
+  border-right-color: #1e4d4e;
+  cursor: pointer;
+}
+form button[type=button] {
+  width: 148px;
+  margin-left:80px;
+  margin-bottom: 50;
+  color:black   ;
+  letter-spacing: .05em;
+  text-shadow: 0 1px 0 #133d3e;
+  text-transform: uppercase;
+  background:pink ;
+  border-top-color: #9fb5b5;
+  border-left-color: #608586;
+  border-bottom-color: #1b4849;
+  border-right-color: #1e4d4e;
+  cursor: pointer;
+}
+
+
+.container{
+            position:relative;
+            width:400px;
+            height:300px;
+            border-radius:5px;
+            border:;
+            overflow:hidden;
+            margin-top:-270px;
+            margin-left:900px;
+
+        }
+
+{
+border-style:none;
+height:110px;
+width:1330px;
+background:rgba(255, 0, 0,0.5);
+margin-top:26px;
+
+}
+.sed{
+background:blue;
+background-size: cover;
+
+
+margin-top:60px;
+background-size: cover;
+
+}
+.login{
+margin-left:550px;
+margin-top:30px;
+}
+
+		</style>
+
+	</head>
+	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+		<section id="home" class="text-center">
+		  <div class="templatemo_headerimage">
+		    <div class="flexslider">
+		      <ul class="slides">
+		        <li>
+		        	<img src="static/images/slider/a1.jpg" alt="Slide 1">
+					<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+
+						<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000" style="height:70px;width:800px;color:yellow;background:black;font-size:20px;font-style:Algerian">MULTI-TRAFFIC SCENCE PERCEPTION BASED ON
+SUPERVISED LEARNING</a>
+					    </div>
+				  	</div>
+		        </li>
+		        <li>
+		        	<img src="static/images/slider/a2.jpg" alt="Slide 2">
+<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+
+						<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000" style="height:70px;width:800px;color:yellow;background:black;font-size:20px;font-style:Algerian">MULTI-TRAFFIC SCENCE PERCEPTION BASED ON
+SUPERVISED LEARNING</a>
+					    </div>
+				  	</div>
+		        </li>
+				  <li>
+		        	<img src="static/images/slider/a3.jpg" alt="Slide 2">
+<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+
+						<a href="#service" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000" style="height:70px;width:800px;color:yellow;background:black;font-size:20px;font-style:Algerian">MULTI-TRAFFIC SCENCE PERCEPTION BASED ON
+SUPERVISED LEARNING</a>
+					    </div>
+				  	</div>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>
+
+		</section>
+
+<script src="static/js/jquery.js"></script>
+		<!-- bootstrap -->
+		<script src="static/js/bootstrap.min.js"></script>
+		<!-- isotope -->
+		<script src="static/js/isotope.js"></script>
+		<!-- images loaded -->
+   		<script src="static/js/imagesloaded.min.js"></script>
+   		<!-- wow -->
+		<script src="static/js/wow.min.js"></script>
+		<!-- smoothScroll -->
+		<script src="static/js/smoothscroll.js"></script>
+		<!-- jquery flexslider -->
+		<script src="static/js/jquery.flexslider.js"></script>
+		<!-- custom -->
+		<script src="static/js/custom.js"></script>
+
+		<div class="login">
+			<h2>USER LOGIN</h2>
+
+		</div>
+
+<div class="sed">
+	<form method="post">
+<div class="inside">
+    {% csrf_token %}
+
+  <label></label>
+  <input type="text" name="username"  placeholder="userid" class="email" style="color:white">
+
+  <label ></label>
+  <input type="password" name="password"  placeholder="password" class="pass">
+
+  <button type="submit" style="color:"> LOGIN HERE</button>
+    <button type="button"><a href="{% url 'register' %}" style="color:black;text-decoration:none">new user</a></button>
+</div>
+</form>
+	<script>
+(function(){
+        var imgLen = document.getElementById('imgGallary');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+
+        if(counter <= images.length){
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+})();
+</script>
+</div>
+	</body>
+</html>

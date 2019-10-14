@@ -1,0 +1,77 @@
+{% extends 'user/design.html' %}
+{% block userblock %}
+{% load staticfiles %}
+
+<style>
+.formin{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 500px;
+    right: 0;
+    margin: auto;
+    padding:5px;
+    background-color:red;
+}
+.formin table{
+margin-left:200px;
+}
+table{
+height:100%;
+}
+input[type=submit]{
+border:10px solid white;
+background:none;
+text-transform:uppercase;
+color:white;
+}
+input[type=submit]:hover{
+background:white;
+color:red;
+}
+</style>
+
+<table style="margin-left:400px;height:70%;background-color:white;">
+ <!--<tr>
+<td><p style="color:;">UPLOADER NAME</p></td>
+<td><p style="color:;">:</p></td>
+<td><p style="color:;">{{obj.usid.userid}}</p></td>
+</tr>
+<tr> -->
+<td><p style="color:;">WEATHER CONDITION</p></td>
+<td><p style="color:;">:</p></td>
+<td><p style="color:;">{{obj.wheather}}</p></td>
+</tr>
+<!--<tr>
+ <td><p style="color:;">AREA</p></td>
+<td><p style="color:;">:</p></td>
+<td><p style="color:;">{{obj.area}}</p></td>
+</tr>
+    <tr>
+<td><p style="color:;">DISTRICT</p></td>
+<td><p style="color:;">:</p></td>
+<td><p style="color:;">{{obj.distric}}</p></td>
+</tr>
+    <tr>
+<td><p style="color:;">STATE</p></td>
+<td><p style="color:;">:</p></td>
+<td><p style="color:;">{{obj.state}}</p></td>
+</tr>
+-->
+<tr>
+<td><p style="color:;">TRAFFIC IMAGES</p></td>
+<td><p style="color:;">:</p></td>
+<td><img src="{{obj.images.url}}" style="width:300px;height:300px;"></td>
+</tr>
+<tr>
+<td>{{message}}</td>
+</tr>
+</table>
+</div>
+
+
+
+
+{% endblock %}
